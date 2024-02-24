@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.app-container {
+  @apply w-[1200px] mx-auto max-w-[90%];
+}
+
+.product-1024px {
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);
+}
