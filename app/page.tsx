@@ -17,15 +17,18 @@ const Home:NextPage = async () => {
     <>
       <Header />
       <main className="flex min-h-screen flex-col items-center justify-between p-24 my-20">
-        <ol className="text-app-primary flex flex-col gap-4 list-outside">
+        <ul className="text-app-primary flex flex-col gap-4 list-disc">
         {
           data && data.products.map((items)=>
-            <Link href={`/products/${items.id}`}>
+            <Link key={items.id} href={`/products/${items.id}`}>
+              <div key={items.id}>
+
               <li key={items.id} className="bg-app-grey p-4 cursor-pointer">{items.title}</li>
+              </div>
             </Link>
           )
         }
-        </ol>
+        </ul>
       </main>
       <Footer />
     </>

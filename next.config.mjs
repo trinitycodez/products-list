@@ -10,6 +10,15 @@ const nextConfig = {
         },
       ],
     },
+    async redirects() {
+      return [
+        {
+          source: '/:slug',
+          destination: '/',
+          permanent: true,
+        },
+      ]
+    },
     
 };
 

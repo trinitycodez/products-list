@@ -13,7 +13,7 @@ type paramsType = {
 const ProductName = async ({params}:paramsType) => {
     console.log(params.slug)
 
-    if (params.slug[0] !== "products") redirect("/");
+    if (params.slug[0] !== "products" || (params.slug.length > 2)) redirect("/");
     
     const res = new DataProduct(params.slug);
     await res.receiveApiDetails();

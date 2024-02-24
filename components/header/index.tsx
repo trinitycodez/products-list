@@ -28,8 +28,8 @@ const Header: FC<props> = ({isRoute}) => {
                 key={i}
                 className={
                   pathname === cur.path
-                    ? `${cur.style} border-b-2 border-app-primary text-app-primary whitespace-nowrap w-[30px]`
-                    : ""
+                    ? `${cur.style} border-b-2 border-app-primary text-app-primary whitespace-nowrap w-[30px] leading-6`
+                    : "leading-6"
                 }
                 href={cur.path}
               >
